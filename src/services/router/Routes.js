@@ -1,11 +1,11 @@
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
 import SignInPage from "../../components/auth/SignInPage";
 import PrivateRoute from "./PrivateRoute";
-import JobsPage from "../../components/jobs/JobsPage";
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import MainPage from "../../main/MainPage";
 
 function FourOhFourPage() {
     return (
@@ -40,7 +40,7 @@ export default function Routes() {
                 {/*Authentication*/}
                 <Route exact path={'/'} component={SignInPage}/>
                 {/*Dashboard*/}
-                <PrivateRoute exact path={'/main-page'} component={JobsPage}/>
+                <PrivateRoute exact path={'/main-page'} component={MainPage}/>
                 {/*Error*/}
                 <Route component={FourOhFourPage}/>
             </Switch>

@@ -85,7 +85,7 @@ function SignIn({history}) {
             await firebaseApp.auth().signInWithEmailAndPassword(email.value, password.value)
 
             // Redirect user to jobs (home page)
-            history.push('/jobs')
+            history.push('/main-page')
         } catch (e) {
             setError({message: e.message, open: true})
         }
@@ -94,7 +94,7 @@ function SignIn({history}) {
     // If user is already signed in, redirect him to home page
     const {currentUser} = useContext(AuthContext)
     if (currentUser) {
-        return <Redirect to="/jobs" />
+        return <Redirect to="/main-page" />
     }
 
     return (
