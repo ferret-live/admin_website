@@ -137,21 +137,6 @@ function SignIn({history}) {
                     >
                         {loading ? <CircularProgress size={24}/> : "sign in"}
                     </Button>
-                    <Typography align={'center'} style={{marginTop: 16}} >
-                        Don't have an account? Sign up.
-                    </Typography>
-                    <Grid container justify={'center'}  spacing={4}>
-                        <Grid item>
-                            <Link variant="body2" component={NavLink} to={'/sign-up'}>
-                                {"Employers"}
-                            </Link>
-                        </Grid>
-                        <Grid item>
-                            <Link variant="body2" href="https://get-a-gig-4af9e.web.app/">
-                                {"Job Seekers"}
-                            </Link>
-                        </Grid>
-                    </Grid>
                 </form>
             </div>
             <Box mt={5}>

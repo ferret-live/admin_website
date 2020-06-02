@@ -1,13 +1,12 @@
 import gql from "graphql-tag"
 
-const CANDIDATE_DETAILS = gql`
-    query CANDIDATE_DETAILS(
+const CANDIDATE = gql`
+    query CANDIDATE(
         $userPk: String!,
     )  {
         Candidate: Candidate_by_pk(userPk: $userPk) {
             age
             gender
-            singaporeResidentialStatus
             certifications
             Candidate_Skill_Junctions {
                 Skill {
@@ -15,12 +14,7 @@ const CANDIDATE_DETAILS = gql`
                 }
             }
             Experiences {
-                Company {
-                    name
-                    Industry {
-                        name
-                    }
-                }
+                companyName
                 description
                 from
                 to
@@ -41,9 +35,12 @@ const CANDIDATE_DETAILS = gql`
                 city
                 state
             }
+            SingaporeResidentialStatus {
+                name
+            }
         }
     }
 `
 
 
-export default CANDIDATE_DETAILS
+export default CANDIDATE

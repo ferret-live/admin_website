@@ -44,18 +44,6 @@ export default function Dashboard({ children }) {
                     </Link>
                     <div style={{flexGrow: 1}}/>
                     <Button
-                        component={Link}
-                        to={'/post-job'}
-                        variant={'outlined'}
-                        color={'secondary'}
-                        endIcon={<PostAdd/>}
-                        style={{marginRight: theme.spacing(2)}}
-                    >
-                        <Typography noWrap>
-                            Post Job
-                        </Typography>
-                    </Button>
-                    <Button
                         onClick={logOut}
                         variant={'outlined'}
                         color={'primary'}

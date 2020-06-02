@@ -2,7 +2,7 @@ import gql from "graphql-tag"
 
 const MATCHES = gql`
     query MATCHES {
-        Match(order_by: {createdAt: desc}) {
+        Match(order_by: {approved: asc, id: desc}) {
             EmployerMatchAction: matchActionByEmployeractionpk {
                 name
             }
